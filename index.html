@@ -5,30 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      .container{
+        position: relative;
+      }
+      div{
+        width: 200px;
+        height: 200px;
+        /* border:1px solid black; */
+      }
+  
+      .blue{
+        background-color: blue;
+        position:absolute;
+        padding:5px;
+        top:20px;
+        left:20px;
+        z-index: 2;
+
+      }
+      .green{
+        background-color: green;
+        position: absolute;
+        top:30px;
+        left:30px;
+        z-index:5 ;
+
+      }
+      .brown{
+        background-color: brown;
+        position: absolute;
+        top:60px;
+        left:60px;
+        z-index: 3;
+      }
+    </style>
 </head>
 <body>
+<div class="container">
+  
 
-   <form class="form"  >
-    <input type="name" name="name" placeholder="Enter your name">
-    <input type="email" name="email" placeholder="Enter your email">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" value="submit"/>
-   </form>
+  </div>
+  <div class="blue">
+    <div class="green">
 
-      <script>
-        document.querySelector('.form').addEventListener('submit',(e)=>{
-          e.preventDefault()
-          console.log(e)
-          const formData = new FormData(e.target)
-          console.log(formData.get('name'))
-          console.log(formData.get('email'))
-          console.log(formData.get('password'))
+    </div>
+  </div>
+  <div class="brown">
 
-        })
-        
+  </div>
+</div>
 
-      </script>
+  
 
-<!-- <script src="./10.js"></script> -->
+<script  src="./36.js">
+  
+</script>
 </body>
 </html>
